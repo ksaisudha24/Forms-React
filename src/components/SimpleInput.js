@@ -2,16 +2,16 @@ import useInput from "../hooks/use-input";
 
 const SimpleInput = (props) => {
   const {
-    enteredValue: enteredName,
-    isTouched: nameIsTouched,
+    value: enteredName,
+    touched: nameIsTouched,
     enteredValueIsValid: enteredNameIsValid,
     onBlurHandler: onNameBlurHandler,
     onChangeHandler: onNameChangeHandler,
     reset: nameReset,
   } = useInput(value => value.trim() !== "");
   const {
-    enteredValue: enteredEmail,
-    isTouched: emailIsTouched,
+    value: enteredEmail,
+    touched: emailIsTouched,
     enteredValueIsValid: enteredEmailIsValid,
     onBlurHandler: onEmailBlurHandler,
     onChangeHandler: onEmailChangeHandler,
@@ -113,7 +113,6 @@ const SimpleInput = (props) => {
 
 //   const onNameChangeHandler = (event) => {
 //     setEnteredName(event.target.value);
-//     setNameIsTouched(true);
 //     // if (event.target.value.trim() === "") {
 //     //   setEnteredNameIsValid(false);
 //     // }
